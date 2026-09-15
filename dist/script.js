@@ -2,14 +2,28 @@
 
 // Edite somente estes dois endereços quando os checkouts estiverem prontos.
 const CHECKOUT_LINKS = Object.freeze({
-  premium: "https://SEU-CHECKOUT-PREMIUM.com",
-  basic: "https://SEU-CHECKOUT-BASICO.com"
+  premium: "https://pay.cakto.com.br/3ce9a3r_1110401",
+  basic: "https://pay.cakto.com.br/xrt9fot_1110344"
 });
 
-const SAMPLE_COUNT = 6;
+const SAMPLE_COUNT = 12;
 const GALLERY_COUNT = 8;
 const samplePath = (number) => `assets/images/sample-${String(number).padStart(2, "0")}.webp`;
-const sampleAlt = (number) => `Amostra ${number} das atividades de alfabetização`;
+const sampleTitles = Object.freeze([
+  "Família silábica do B",
+  "Ligue as sílabas",
+  "Complete as palavras",
+  "Forme as palavras",
+  "Separe as sílabas",
+  "Leia e marque",
+  "Ortografia com M ou N",
+  "Separação silábica",
+  "Ordem alfabética",
+  "Encontre as rimas",
+  "Singular e plural",
+  "Complete as frases"
+]);
+const sampleAlt = (number) => `Amostra ${number}: ${sampleTitles[number - 1]}`;
 const galleryPath = (number) => `assets/images/gallery-${String(number).padStart(2, "0")}.webp`;
 const galleryTitles = Object.freeze([
   "Pinte a sílaba inicial",
@@ -259,7 +273,7 @@ function setLightboxImage(number) {
   lightbox.querySelector("#lightboxFallback").textContent = `Amostra ${lightboxState.current}`;
   lightbox.querySelector("#lightboxCaption").textContent = isGallery
     ? `${galleryTitles[lightboxState.current - 1]} • ${lightboxState.current} de ${count}`
-    : `Amostra ${lightboxState.current} de ${count}`;
+    : `${sampleTitles[lightboxState.current - 1]} • ${lightboxState.current} de ${count}`;
 }
 
 function trapFocus(event, container) {
@@ -310,19 +324,37 @@ function initPurchaseToast() {
   if (!toast) return;
 
   const closeButton = toast.querySelector("button");
+  const nameOutput = toast.querySelector("#purchaseName");
+  const customers = Object.freeze([
+    "Mariana Alves", "Gabriel Monteiro", "Camila Ferreira", "Lucas Ribeiro", "Juliana Martins",
+    "Rafael Nogueira", "Beatriz Carvalho", "Felipe Andrade", "Amanda Rodrigues", "Bruno Tavares",
+    "Larissa Moreira", "Matheus Cardoso", "Isabela Fernandes", "Thiago Almeida", "Renata Barbosa",
+    "Gustavo Correia", "Letícia Azevedo", "Daniel Siqueira", "Natália Freitas", "Eduardo Menezes",
+    "Carolina Farias", "Vinícius Teixeira", "Priscila Moura", "Leonardo Batista", "Fernanda Vasconcelos"
+  ]);
   let hideTimer = 0;
+  let nextTimer = 0;
+  let currentCustomer = 0;
   const hide = () => {
     window.clearTimeout(hideTimer);
     toast.classList.remove("is-visible");
     window.setTimeout(() => { toast.hidden = true; }, 250);
   };
   const show = () => {
+    nameOutput.textContent = customers[currentCustomer];
+    currentCustomer = (currentCustomer + 1) % customers.length;
     toast.hidden = false;
     requestAnimationFrame(() => toast.classList.add("is-visible"));
-    hideTimer = window.setTimeout(hide, 7000);
+    hideTimer = window.setTimeout(() => {
+      hide();
+      nextTimer = window.setTimeout(show, 9000);
+    }, 6000);
   };
 
-  closeButton.addEventListener("click", hide);
+  closeButton.addEventListener("click", () => {
+    window.clearTimeout(nextTimer);
+    hide();
+  });
   window.setTimeout(show, 6500);
 }
 

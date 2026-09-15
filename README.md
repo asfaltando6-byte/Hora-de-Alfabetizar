@@ -15,7 +15,8 @@ alfabetizacao-silabas/
 │   │       ├── benefits-use.webp
 │   │       ├── premium-bundle.webp
 │   │       ├── digital-delivery.webp
-│   │       └── sample-01.webp ... sample-06.webp
+│   │       ├── favicon.svg
+│   │       └── sample-01.webp ... sample-12.webp
 │   ├── index.html
 │   ├── styles.css
 │   └── script.js

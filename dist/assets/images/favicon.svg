@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Hora de Alfabetizar">
+  <rect width="64" height="64" rx="16" fill="#24356b"/>
+  <path d="M10 18c8-3 15-1 22 5v29c-7-6-14-8-22-5V18Z" fill="#dff5ff"/>
+  <path d="M54 18c-8-3-15-1-22 5v29c7-6 14-8 22-5V18Z" fill="#fff2b8"/>
+  <circle cx="32" cy="17" r="8" fill="#ff7d6b"/>
+  <path d="m28 19 4-10 4 10m-6.5-4h5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
