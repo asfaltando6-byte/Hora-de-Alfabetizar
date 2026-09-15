@@ -140,6 +140,13 @@ function initSampleViewer() {
     });
   }
 
+  function preloadNextSample() {
+    const next = (current % SAMPLE_COUNT) + 1;
+    const preload = new Image();
+    preload.decoding = "async";
+    preload.src = samplePath(next);
+  }
+
   function startAutoplay() {
     if (userPaused) return;
     window.clearInterval(autoplayTimer);
@@ -170,6 +177,7 @@ function initSampleViewer() {
     const distance = event.changedTouches[0].clientX - touchStartX;
     if (Math.abs(distance) > 45) { show(distance > 0 ? current - 1 : current + 1); restartAutoplay(); }
   }, { passive: true });
+  image.addEventListener("load", preloadNextSample);
 
   viewer.addEventListener("mouseenter", pauseAutoplay);
   viewer.addEventListener("mouseleave", startAutoplay);
@@ -214,6 +222,8 @@ function initGallery() {
     image.width = 778;
     image.height = 1100;
     image.loading = "lazy";
+    image.decoding = "async";
+    image.fetchPriority = "low";
     const label = document.createElement("span");
     label.className = "gallery-item__label";
     label.textContent = galleryTitles[index - 1];

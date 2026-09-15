@@ -12,13 +12,24 @@
   <meta property="og:description" content="Atividades organizadas e prontas para baixar, imprimir e usar em casa ou nas atividades escolares.">
   <meta property="og:image" content="assets/images/product-main-v2.webp">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/images/product-main-v2.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="dns-prefetch" href="//connect.facebook.net">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
+  <!-- Meta Pixel: somente PageView -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','3669606983313706');
+    fbq('track','PageView');
+  </script>
 </head>
 <body>
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=3669606983313706&amp;ev=PageView&amp;noscript=1"></noscript>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="urgency-bar" aria-label="Condição especial">
@@ -46,7 +57,7 @@
 
         <div class="hero__visual reveal" aria-label="Apresentação do material">
           <figure class="product-cover product-cover--editorial image-shell image-shell--cover">
-            <img src="assets/images/product-main-v2.webp" alt="Mockup do kit com 80 atividades de alfabetização e páginas do material" width="1122" height="1402" fetchpriority="high">
+            <img src="assets/images/product-main-v2.webp" alt="Mockup do kit com 80 atividades de alfabetização e páginas do material" width="1122" height="1402" fetchpriority="high" decoding="async">
             <span class="image-fallback" aria-hidden="true"><small>PDF PARA IMPRIMIR</small><strong><em>80</em> Atividades de Alfabetização</strong><b>com sílabas simples</b><span class="letter-chips">BA &nbsp; BE &nbsp; BI &nbsp; BO &nbsp; BU</span></span>
           </figure>
           <span class="hero__badge"><b>80</b> atividades prontas</span>
@@ -60,7 +71,7 @@
         <div class="sample-viewer reveal" id="sampleViewer" tabindex="0" aria-label="Visualizador de amostras; use as setas para navegar">
           <div class="sample-viewer__toolbar"><button class="icon-button sample-prev" type="button" aria-label="Ver amostra anterior">← <span>Anterior</span></button><strong class="sample-counter" aria-live="polite">Página 1 / 6</strong><button class="icon-button sample-next" type="button" aria-label="Ver próxima amostra"><span>Próxima</span> →</button></div>
           <button class="sample-viewer__stage image-shell" type="button" aria-label="Ampliar amostra atual">
-            <img id="sampleImage" src="assets/images/sample-01.webp" alt="Amostra 1 das atividades de alfabetização" width="850" height="1100">
+            <img id="sampleImage" src="assets/images/sample-01.webp" alt="Amostra 1 das atividades de alfabetização" width="850" height="1100" loading="lazy" decoding="async" fetchpriority="low">
             <span class="image-fallback worksheet-placeholder" aria-hidden="true"><small>ATIVIDADE DE ALFABETIZAÇÃO</small><strong>Amostra <span id="sampleFallbackNumber">1</span></strong><span class="worksheet-line"></span><span class="worksheet-line worksheet-line--short"></span><span class="syllable-row"><b>BA</b><b>BE</b><b>BI</b><b>BO</b><b>BU</b></span><span class="worksheet-boxes"><i></i><i></i><i></i></span></span>
           </button>
           <p class="sample-viewer__hint">Clique para ampliar <span aria-hidden="true">↗</span></p>
@@ -95,7 +106,7 @@
     <section class="section trust-section">
       <div class="container">
         <header class="section-heading reveal"><p class="eyebrow">Simples e direto</p><h2>Você recebe o material logo após a confirmação do pagamento.</h2><p>Os arquivos são digitais e ficam disponíveis para acesso após a compra.</p></header>
-        <div class="trust-layout"><figure class="content-visual trust-visual image-shell reveal"><img src="assets/images/digital-delivery.webp" alt="Impressora com atividade e arquivo digital em PDF" width="1400" height="1050" loading="lazy"><span class="image-fallback" aria-hidden="true"><strong>Baixe e imprima</strong></span></figure><div class="trust-grid"><article class="trust-card reveal"><span aria-hidden="true">✓</span><div><h3>Compra segura</h3><p>Pagamento processado no ambiente do checkout.</p></div></article><article class="trust-card reveal"><span aria-hidden="true">↓</span><div><h3>Entrega digital</h3><p>Acesso liberado após a confirmação do pagamento.</p></div></article><article class="trust-card reveal"><span aria-hidden="true">PDF</span><div><h3>Pronto para imprimir</h3><p>Arquivos organizados para baixar e usar.</p></div></article></div></div>
+        <div class="trust-layout"><figure class="content-visual trust-visual image-shell reveal"><img src="assets/images/digital-delivery.webp" alt="Impressora com atividade e arquivo digital em PDF" width="1400" height="1050" loading="lazy" decoding="async"><span class="image-fallback" aria-hidden="true"><strong>Baixe e imprima</strong></span></figure><div class="trust-grid"><article class="trust-card reveal"><span aria-hidden="true">✓</span><div><h3>Compra segura</h3><p>Pagamento processado no ambiente do checkout.</p></div></article><article class="trust-card reveal"><span aria-hidden="true">↓</span><div><h3>Entrega digital</h3><p>Acesso liberado após a confirmação do pagamento.</p></div></article><article class="trust-card reveal"><span aria-hidden="true">PDF</span><div><h3>Pronto para imprimir</h3><p>Arquivos organizados para baixar e usar.</p></div></article></div></div>
       </div>
     </section>
 
@@ -106,7 +117,7 @@
           <span class="premium-card__ribbon">PACOTE MAIS COMPLETO</span>
           <div class="premium-card__intro"><p class="offer-kicker">Oferta Premium</p><h3 id="premium-title">Kit Completo de Alfabetização</h3><p>Não leve apenas as 80 atividades. Tenha mais materiais para continuar avançando.</p></div>
           <div class="premium-card__content">
-            <figure class="premium-bundle image-shell" aria-label="Três produtos incluídos"><img src="assets/images/premium-bundle.webp" alt="Kit Premium com 80 atividades, grafismo fonético e sílabas complexas" width="1400" height="1050" loading="lazy"><span class="image-fallback"><small>PACOTE PREMIUM</small><strong>3 materiais completos</strong></span></figure>
+            <figure class="premium-bundle image-shell" aria-label="Três produtos incluídos"><img src="assets/images/premium-bundle.webp" alt="Kit Premium com 80 atividades, grafismo fonético e sílabas complexas" width="1400" height="1050" loading="lazy" decoding="async"><span class="image-fallback"><small>PACOTE PREMIUM</small><strong>3 materiais completos</strong></span></figure>
             <div class="premium-card__details">
               <ul class="offer-list"><li><span aria-hidden="true">✓</span> 80 atividades com sílabas simples</li><li><span aria-hidden="true">✓</span> 51 atividades de grafismo fonético</li><li><span aria-hidden="true">✓</span> Caderno de sílabas complexas</li><li><span aria-hidden="true">✓</span> Arquivos digitais em PDF</li><li><span aria-hidden="true">✓</span> Prontos para baixar e imprimir</li><li><span aria-hidden="true">✓</span> Acesso imediato</li></ul>
               <div class="price-box"><span>Leve os 3 materiais por</span><strong><small>R$</small> 19,90</strong><a class="button button--primary button--large" data-checkout="premium" href="https://pay.cakto.com.br/3ce9a3r_1110401">QUERO O KIT COMPLETO</a><p class="microcopy">Pagamento único • Material digital • Acesso imediato</p></div>
@@ -143,14 +154,14 @@
   <div class="mobile-sticky" id="mobileSticky" aria-hidden="true"><div><span>Kit completo</span><strong>R$ 19,90</strong></div><a class="button button--primary" data-checkout="premium" href="https://pay.cakto.com.br/3ce9a3r_1110401" tabindex="-1">QUERO O PREMIUM</a></div>
 
   <aside class="purchase-toast" id="purchaseToast" aria-live="polite" aria-atomic="true" hidden>
-    <span class="purchase-toast__icon" aria-hidden="true"><img src="assets/images/favicon.svg" alt="" width="42" height="42"></span>
+    <span class="purchase-toast__icon" aria-hidden="true"><img src="assets/images/favicon.svg" alt="" width="42" height="42" loading="lazy" decoding="async"></span>
     <div><small>CLIENTE DO MATERIAL</small><strong id="purchaseName">Mariana Alves</strong><p id="purchaseMessage">adquiriu o material digital.</p></div>
     <button type="button" aria-label="Fechar notificação">×</button>
   </aside>
 
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" hidden>
     <div class="lightbox__backdrop" data-lightbox-close></div>
-    <div class="lightbox__dialog"><h2 id="lightboxTitle" class="visually-hidden">Amostra ampliada</h2><button class="lightbox__close" type="button" aria-label="Fechar visualização" data-lightbox-close>×</button><button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Imagem anterior">←</button><div class="lightbox__media image-shell"><img id="lightboxImage" src="" alt="" width="850" height="1100"><span class="image-fallback worksheet-placeholder" aria-hidden="true"><small>ATIVIDADE DE ALFABETIZAÇÃO</small><strong id="lightboxFallback">Amostra</strong><span class="worksheet-line"></span><span class="syllable-row"><b>BA</b><b>BE</b><b>BI</b><b>BO</b><b>BU</b></span><span class="worksheet-boxes"><i></i><i></i><i></i></span></span></div><button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Próxima imagem">→</button><p id="lightboxCaption" class="lightbox__caption"></p></div>
+    <div class="lightbox__dialog"><h2 id="lightboxTitle" class="visually-hidden">Amostra ampliada</h2><button class="lightbox__close" type="button" aria-label="Fechar visualização" data-lightbox-close>×</button><button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Imagem anterior">←</button><div class="lightbox__media image-shell"><img id="lightboxImage" src="" alt="" width="850" height="1100" decoding="async"><span class="image-fallback worksheet-placeholder" aria-hidden="true"><small>ATIVIDADE DE ALFABETIZAÇÃO</small><strong id="lightboxFallback">Amostra</strong><span class="worksheet-line"></span><span class="syllable-row"><b>BA</b><b>BE</b><b>BI</b><b>BO</b><b>BU</b></span><span class="worksheet-boxes"><i></i><i></i><i></i></span></span></div><button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Próxima imagem">→</button><p id="lightboxCaption" class="lightbox__caption"></p></div>
   </div>
 </body>
 </html>

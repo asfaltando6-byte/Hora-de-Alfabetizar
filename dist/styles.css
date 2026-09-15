@@ -18,7 +18,9 @@ a{color:inherit}
 }
 
 /* 3. global */
-body{min-width:320px;overflow-x:hidden;color:var(--text);background:#fff;font-family:"Montserrat",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:1rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:400 900;font-display:swap;src:url("assets/fonts/montserrat-latin.woff2") format("woff2")}
+html,body,button,input,select,textarea{font-family:"Montserrat",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{min-width:320px;overflow-x:hidden;color:var(--text);background:#fff;font-size:1rem;line-height:1.65;-webkit-font-smoothing:antialiased}
 body.is-modal-open{overflow:hidden}
 h1,h2,h3,strong{color:var(--blue)}
 h1{font-size:clamp(2.05rem,8vw,3.75rem);line-height:1.05;letter-spacing:-.045em;font-weight:900}
@@ -50,6 +52,7 @@ p{max-width:70ch}
 [hidden]{display:none!important}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .reveal.is-visible{opacity:1;transform:none}
+.benefits,.gallery-section,.trust-section,.offer-section,.faq-section,.footer{content-visibility:auto;contain-intrinsic-size:auto 850px}
 
 /* 4. header */
 .urgency-bar{position:relative;z-index:20;color:var(--blue);background:#fff;border-bottom:1px solid #e5eaf0;font-size:.72rem;font-weight:800}
