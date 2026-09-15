@@ -16,7 +16,8 @@ alfabetizacao-silabas/
 │   │       ├── premium-bundle.webp
 │   │       ├── digital-delivery.webp
 │   │       ├── favicon.svg
-│   │       └── sample-01.webp ... sample-12.webp
+│   │       ├── sample-01.webp ... sample-06.webp
+│   │       └── gallery-01.webp ... gallery-14.webp
 │   ├── index.html
 │   ├── styles.css
 │   └── script.js

@@ -103,7 +103,7 @@ p{max-width:70ch}
 .icon-button:hover{background:#f3f7fb}
 .icon-button span{display:none}
 .sample-counter{text-align:center;font-size:.78rem}
-.sample-viewer__stage{display:block;width:min(100%,520px);aspect-ratio:2/3;margin:auto;border:1px solid #dfe6ee;border-radius:12px;cursor:zoom-in;background:#fff}
+.sample-viewer__stage{display:block;width:min(100%,520px);aspect-ratio:8.5/11;margin:auto;border:1px solid #dfe6ee;border-radius:12px;cursor:zoom-in;background:#fff}
 .sample-viewer__stage img{object-fit:contain;background:#fff}
 .sample-viewer__stage img.is-entering{animation:sample-enter .42s ease both}
 @keyframes sample-enter{from{opacity:.2;transform:scale(.985)}to{opacity:1;transform:none}}

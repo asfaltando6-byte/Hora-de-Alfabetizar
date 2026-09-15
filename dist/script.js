@@ -6,8 +6,8 @@ const CHECKOUT_LINKS = Object.freeze({
   basic: "https://pay.cakto.com.br/xrt9fot_1110344"
 });
 
-const SAMPLE_COUNT = 12;
-const GALLERY_COUNT = 8;
+const SAMPLE_COUNT = 6;
+const GALLERY_COUNT = 14;
 const samplePath = (number) => `assets/images/sample-${String(number).padStart(2, "0")}.webp`;
 const sampleTitles = Object.freeze([
   "Família silábica do B",
@@ -15,13 +15,7 @@ const sampleTitles = Object.freeze([
   "Complete as palavras",
   "Forme as palavras",
   "Separe as sílabas",
-  "Leia e marque",
-  "Ortografia com M ou N",
-  "Separação silábica",
-  "Ordem alfabética",
-  "Encontre as rimas",
-  "Singular e plural",
-  "Complete as frases"
+  "Leia e marque"
 ]);
 const sampleAlt = (number) => `Amostra ${number}: ${sampleTitles[number - 1]}`;
 const galleryPath = (number) => `assets/images/gallery-${String(number).padStart(2, "0")}.webp`;
@@ -33,7 +27,13 @@ const galleryTitles = Object.freeze([
   "Circule a palavra correta",
   "Conte as sílabas",
   "Complete as frases",
-  "Encontre as palavras"
+  "Encontre as palavras",
+  "Ortografia com M ou N",
+  "Separação silábica",
+  "Ordem alfabética",
+  "Encontre as rimas",
+  "Singular e plural",
+  "Complete as frases"
 ]);
 
 document.addEventListener("DOMContentLoaded", () => {
