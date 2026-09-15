@@ -30,3 +30,8 @@ Os arquivos de imagem listados são opcionais durante o desenvolvimento: a pági
 - Imagens: coloque os arquivos WebP em `dist/assets/images/` usando exatamente os nomes da estrutura acima.
 - Rodapé: substitua os `href="#"` dos links de contato, privacidade e termos em `dist/index.html`.
 - Políticas comerciais: procure por `ATUALIZAR INFORMAÇÃO COM POLÍTICA REAL` em `dist/index.html`.
+
+## Publicação na Vercel
+
+O arquivo `vercel.json` configura `dist` como diretório público. Ao importar este
+repositório, mantenha o diretório raiz do projeto na Vercel como `./`.
