@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initGallery();
   initLightbox();
   initFaq();
-  initStickyCta();
   initPurchaseToast();
   initSmoothScroll();
   initRevealAnimations();
@@ -309,23 +308,6 @@ function initFaq() {
       button.setAttribute("aria-expanded", String(willOpen));
     });
   });
-}
-
-// sticky CTA
-function initStickyCta() {
-  const sticky = document.querySelector("#mobileSticky");
-  const hero = document.querySelector(".hero");
-  if (!sticky || !hero) return;
-
-  const update = () => {
-    const show = window.innerWidth < 600 && window.scrollY > hero.offsetTop + hero.offsetHeight * 0.75;
-    sticky.classList.toggle("is-visible", show);
-    sticky.setAttribute("aria-hidden", String(!show));
-    sticky.querySelector("a").tabIndex = show ? 0 : -1;
-  };
-  update();
-  window.addEventListener("scroll", update, { passive: true });
-  window.addEventListener("resize", update);
 }
 
 // purchase notification
